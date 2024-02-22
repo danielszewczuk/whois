@@ -11,6 +11,7 @@ def index():
 @api.route('/query', methods=["POST"])
 def query():
     domain = request.json.get('domain')
+    
     def find_whois_server(domain, server=f"whois.iana.org", port=43):
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         sock.settimeout(5)
@@ -38,7 +39,6 @@ def query():
             return whois_server
         else:
             return "Unkown WHOIS server"
-
 
     def query(domain):
         whois_server = find_whois_server(domain)
