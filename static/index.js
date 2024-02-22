@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
       };
   
       // Wykonujemy żądanie POST
-      fetch('http://localhost/api/query', {
+      fetch('http://whoislookup.vercel.app/api/query', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
