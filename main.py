@@ -1,10 +1,8 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for
 from api.query import *
 
-app = Flask(__name__)
-
+app = Flask(__name__, static_url_path='/static')
 app.register_blueprint(api, url_prefix="/api")
-
 
 @app.route("/")
 def root():
