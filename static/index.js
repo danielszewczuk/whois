@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
       };
   
       // Wykonujemy żądanie POST
-      fetch('http://localhost:5000/api/query', {
+      fetch('http://localhost/api/query', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
