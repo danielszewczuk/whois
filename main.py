@@ -6,7 +6,11 @@ app.register_blueprint(api, url_prefix="/api")
 
 @app.errorhandler(404)
 def notfound(error):
-    return render_template("404.html"), 404
+    return render_template("error.html", error=404), 404
+
+@app.errorhandler(405)
+def notallowed(error):
+    return render_template("error.html", error="Method Not Allowed (405)"), 405
 
 @app.route("/")
 def root():
