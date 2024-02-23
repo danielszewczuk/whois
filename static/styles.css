@@ -1,8 +1,14 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 body {
     font-family: 'Poppins';
     background-color: rgb(35, 35, 35);
     color: white;
 }
-
-
+input[type="text"],
+button {
+    border-radius: 10px;
+    width: 300px;
+    height: 30px;
+    font-size: 16px;
+}
