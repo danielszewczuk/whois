@@ -12,6 +12,10 @@ def notfound(error):
 def notallowed(error):
     return render_template("error.html", error="Method Not Allowed (405)"), 405
 
+@app.errorhandler(500)
+def internalerror(error):
+    return render_template("error.html", error="Internal Server Error"), 500
+
 @app.route("/")
 def root():
     return render_template("index.html")
